@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HF Men's Wear — Western &amp; Formal Wear · Dade City, FL</title>
+<meta name="description" content="Family-owned since 1977. Western wear and formal wear in Dade City, Florida — Wrangler, Levi's, Ariat, boots and hats, plus tuxedo &amp; suit rentals for weddings, quinceañeras and prom." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14110d;          /* near-black */
+    --indigo:#16233b;       /* denim night */
+    --indigo-2:#1d3050;
+    --bone:#f2ecdd;         /* raw canvas */
+    --bone-2:#e7ddc8;
+    --tan:#b27b44;          /* saddle leather */
+    --tan-deep:#8f5f30;
+    --turq:#1e8c82;         /* western turquoise / costa lens */
+    --turq-deep:#146b63;
+    --paper:#fbf8f0;
+    --line:rgba(20,17,13,.14);
+
+    --display:"Fraunces",Georgia,serif;
+    --sans:"Archivo",system-ui,sans-serif;
+
+    --wrap:1200px;
+    --stitch-h:9px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.01em}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+
+  /* ---------- topstitch signature ---------- */
+  .stitch{
+    height:var(--stitch-h);width:100%;
+    background-image:
+      repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px),
+      repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px);
+    background-size:28px 2px,28px 2px;
+    background-position:0 top,14px bottom;
+    background-repeat:repeat-x,repeat-x;
+    opacity:.85;
+  }
+  .stitch--onDark{
+    background-image:
+      repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px),
+      repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px);
+    opacity:.9;
+  }
+
+  .eyebrow{
+    font-family:var(--sans);font-weight:700;font-size:.74rem;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--tan-deep);
+    display:inline-flex;align-items:center;gap:.7em;margin:0 0 18px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--tan);display:inline-block}
+  .eyebrow--turq{color:var(--turq-deep)}
+  .eyebrow--turq::before{background:var(--turq)}
+  .eyebrow--light{color:#e9c79a}
+  .eyebrow--light::before{background:#e9c79a}
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(251,248,240,.86);
+    backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .mark{width:40px;height:40px;flex:none}
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .brand-txt b{font-family:var(--display);font-weight:600;font-size:1.18rem;letter-spacing:.01em}
+  .brand-txt span{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tan-deep);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink);opacity:.82;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);
+    font-weight:700;font-size:.92rem;letter-spacing:.01em;text-decoration:none;
+    padding:12px 22px;border-radius:2px;border:2px solid transparent;cursor:pointer;
+    transition:transform .15s ease, background .2s, color .2s;white-space:nowrap;
+  }
+  .btn--solid{background:var(--indigo);color:var(--bone)}
+  .btn--solid:hover{background:var(--ink);transform:translateY(-2px)}
+  .btn--tan{background:var(--tan);color:#fff}
+  .btn--tan:hover{background:var(--tan-deep);transform:translateY(-2px)}
+  .btn--ghost{border-color:currentColor;color:var(--bone)}
+  .btn--ghost:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+  .btn--ink-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn--ink-ghost:hover{background:var(--ink);color:var(--bone)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 35%}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(12,10,8,.30) 0%,rgba(12,10,8,0) 32%),
+      linear-gradient(75deg,rgba(9,8,6,.86) 8%,rgba(9,8,6,.42) 46%,rgba(9,8,6,0) 74%);}
+  .hero-in{position:relative;z-index:2;padding:0 26px 74px;max-width:var(--wrap);margin:0 auto;width:100%}
+  .hero h1{color:var(--bone);font-size:clamp(2.7rem,6.3vw,5.4rem);font-weight:600;max-width:14ch}
+  .hero h1 em{font-style:italic;font-weight:500;color:#e9c79a}
+  .hero p{color:rgba(242,236,221,.9);font-size:clamp(1.02rem,1.7vw,1.28rem);max-width:46ch;margin:22px 0 30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-badge{
+    position:absolute;top:26px;right:26px;z-index:2;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    width:118px;height:118px;border-radius:50%;color:var(--bone);
+    border:2px dashed rgba(233,199,154,.8);text-align:center;line-height:1.1;
+    background:rgba(12,10,8,.22);backdrop-filter:blur(2px);
+  }
+  .hero-badge b{font-family:var(--display);font-size:1.5rem;font-weight:600;color:#e9c79a}
+  .hero-badge span{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;margin-top:2px}
+
+  /* ---------- facts bar ---------- */
+  .facts{background:var(--indigo);color:var(--bone)}
+  .facts-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .fact{padding:30px 26px;border-right:1px solid rgba(242,236,221,.13)}
+  .fact:last-child{border-right:0}
+  .fact b{display:block;font-family:var(--display);font-size:1.55rem;font-weight:600;color:#e9c79a;line-height:1}
+  .fact span{display:block;margin-top:8px;font-size:.82rem;letter-spacing:.04em;color:rgba(242,236,221,.78)}
+
+  /* ---------- generic section ---------- */
+  section{scroll-margin-top:80px}
+  .pad{padding:92px 0}
+  .lead{font-size:clamp(1.9rem,3.6vw,2.9rem);max-width:20ch;margin-bottom:18px}
+  .intro-copy{max-width:54ch;color:rgba(20,17,13,.78);font-size:1.08rem}
+
+  /* western */
+  .western{background:var(--bone)}
+  .west-top{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .west-copy h2{font-size:clamp(2rem,3.8vw,3.1rem)}
+  .brandline{margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-weight:700;font-size:.82rem;letter-spacing:.04em;padding:8px 15px;border:1.5px solid var(--line);border-radius:2px;background:var(--paper)}
+  .chip--turq{border-color:var(--turq);color:var(--turq-deep)}
+  .west-img{position:relative}
+  .west-img img{width:100%;height:520px;object-fit:cover;border-radius:3px}
+  .tagpin{position:absolute;left:-14px;bottom:26px;background:var(--tan);color:#fff;
+    font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;border-radius:2px;
+    box-shadow:0 10px 26px rgba(20,17,13,.25)}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+  .cat{position:relative;border-radius:3px;overflow:hidden;background:var(--ink);aspect-ratio:3/4}
+  .cat img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;opacity:.92}
+  .cat:hover img{transform:scale(1.05)}
+  .cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,8,6,.82) 100%)}
+  .cat-label{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px 18px 16px;color:var(--bone)}
+  .cat-label b{font-family:var(--display);font-size:1.22rem;font-weight:600;display:block}
+  .cat-label span{font-size:.78rem;color:rgba(242,236,221,.82)}
+
+  /* formal */
+  .formal{background:var(--indigo);color:var(--bone);position:relative}
+  .formal .intro-copy{color:rgba(242,236,221,.82)}
+  .formal-top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+  .formal-top h2{color:var(--bone);font-size:clamp(2rem,3.8vw,3.1rem)}
+  .formal-top h2 em{font-style:italic;color:#e9c79a}
+  .occ{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .occ .chip{background:transparent;border-color:rgba(242,236,221,.28);color:var(--bone)}
+  .occ .chip--turq{border-color:var(--turq);color:#8fd6cf}
+  .formal-note{margin-top:26px;padding:18px 22px;border-left:3px solid var(--tan);
+    background:rgba(242,236,221,.06);font-size:.98rem;color:rgba(242,236,221,.9);border-radius:0 3px 3px 0}
+  .formal-note b{color:#e9c79a}
+  .formal-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:220px 220px;gap:16px;margin-top:56px}
+  .formal-grid figure{margin:0;position:relative;border-radius:3px;overflow:hidden}
+  .formal-grid img{width:100%;height:100%;object-fit:cover}
+  .formal-grid .tall{grid-row:span 2;height:456px}
+  .cap{position:absolute;left:14px;bottom:12px;color:#fff;font-weight:700;font-size:.8rem;
+    letter-spacing:.04em;text-shadow:0 2px 12px rgba(0,0,0,.6);z-index:2}
+
+  /* gallery */
+  .gallery{background:var(--ink);color:var(--bone)}
+  .gallery .lead{color:var(--bone)}
+  .pano{margin-top:14px;border-radius:3px;overflow:hidden;border:1px solid rgba(242,236,221,.1)}
+  .pano img{width:100%;height:auto}
+  .pano+.pano{margin-top:16px}
+
+  /* visit */
+  .visit{background:var(--bone)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:stretch}
+  .visit h2{font-size:clamp(2rem,3.8vw,3rem)}
+  .info-row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .info-row:first-of-type{border-top:1px solid var(--line)}
+  .info-ic{width:26px;flex:none;color:var(--tan-deep);margin-top:2px}
+  .info-row b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tan-deep);margin-bottom:4px}
+  .info-row a{text-decoration:none;font-weight:600}
+  .info-row a:hover{color:var(--tan-deep)}
+  .hours-line{display:flex;justify-content:space-between;gap:20px;max-width:380px;font-size:.98rem;padding:3px 0}
+  .hours-line span{white-space:nowrap}
+  .hours-line span:last-child{font-weight:600}
+  .confirm{font-size:.86rem;color:rgba(20,17,13,.6);margin-top:8px}
+  .map{border-radius:3px;overflow:hidden;border:1px solid var(--line);min-height:420px;background:#dfe6e4}
+  .map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+  .visit-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(242,236,221,.72);padding:56px 0 34px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:12px}
+  .foot-brand b{font-family:var(--display);color:var(--bone);font-size:1.3rem;font-weight:600}
+  .foot-brand span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tan)}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-links a{text-decoration:none;font-weight:600;color:var(--bone);opacity:.82}
+  .foot-links a:hover{opacity:1;color:#e9c79a}
+  .foot-bottom{margin-top:34px;padding-top:22px;border-top:1px solid rgba(242,236,221,.14);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    .facts-in{grid-template-columns:repeat(2,1fr)}
+    .fact:nth-child(2){border-right:0}
+    .fact{border-bottom:1px solid rgba(242,236,221,.13)}
+    .west-top,.formal-top,.visit-grid{grid-template-columns:1fr;gap:34px}
+    .cat-grid{grid-template-columns:repeat(2,1fr)}
+    .formal-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}
+    .formal-grid .tall{height:376px}
+    .nav-links{display:none}
+    .west-img img{height:400px}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    .pad{padding:64px 0}
+    .cat-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .nav-cta .btn span.full{display:none}
+    .hero-badge{width:96px;height:96px;top:auto;bottom:22px;right:22px}
+    .hero-in{padding-bottom:56px}
+    .formal-grid{grid-template-columns:1fr}
+    .formal-grid .tall{grid-row:auto;height:240px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .cat img{transition:none}
+    .btn:hover{transform:none}
+  }
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--turq);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="HF Men's Wear home">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="43" height="43" rx="7" fill="#16233b"/>
+        <rect x="5.5" y="5.5" width="37" height="37" rx="4.5" fill="none" stroke="#b27b44" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="24" y="31.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="20" fill="#f2ecdd">HF</text>
+      </svg>
+      <span class="brand-txt"><b>HF Men's Wear</b><span>Dade City · Est. 1977</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#western">Western</a>
+      <a href="#formal">Formal</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="#gallery">The Store</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--tan" href="tel:+13525679118">Call <span class="full">(352) 567-9118</span></a>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/hero-western-formal.jpg" alt="A groom in a grey western suit and black cowboy hat with his bride beside a white ranch fence" />
+  <div class="hero-badge" aria-hidden="true"><b>1977</b><span>Family owned</span></div>
+  <div class="hero-in">
+    <h1>From the ranch to the <em>reception.</em></h1>
+    <p>Two things done right for nearly fifty years — real Western wear you'll actually work in, and formal wear sharp enough for the biggest day of your life.</p>
+    <div class="hero-cta">
+      <a class="btn btn--tan" href="#visit">Plan a visit</a>
+      <a class="btn btn--ghost" href="#western">See what we carry</a>
+    </div>
+  </div>
+</section>
+<div class="stitch" aria-hidden="true"></div>
+
+<!-- FACTS -->
+<div class="facts">
+  <div class="wrap facts-in">
+    <div class="fact"><b>Since 1977</b><span>Nearly 50 years on US-301</span></div>
+    <div class="fact"><b>Family-run</b><span>Fitted by the folks who own it</span></div>
+    <div class="fact"><b>Rent or own</b><span>Tuxedos &amp; suits for the whole party</span></div>
+    <div class="fact"><b>Dade City</b><span>Morningside Plaza, by Walmart</span></div>
+  </div>
+</div>
+
+<!-- WESTERN -->
+<section id="western" class="western pad">
+  <div class="wrap">
+    <div class="west-top">
+      <div class="west-copy reveal">
+        <span class="eyebrow">Western Wear</span>
+        <h2>Built to be worn hard.</h2>
+        <p class="intro-copy">A wall of denim stacked and sorted by size, felt and straw hats, pearl-snap shirts, and boots lined up front to back. We keep the brands ranch country actually reaches for — and we'll help you find the right size and cut before you leave.</p>
+        <div class="brandline">
+          <span class="chip">Wrangler</span>
+          <span class="chip">Levi's</span>
+          <span class="chip">Ariat</span>
+          <span class="chip">Cinch</span>
+          <span class="chip">Rock 47</span>
+          <span class="chip">Laredo</span>
+          <span class="chip">Justin</span>
+          <span class="chip chip--turq">Costa</span>
+          <span class="chip chip--turq">Wiley X</span>
+        </div>
+      </div>
+      <div class="west-img reveal">
+        <img src="images/western-denim-wall.jpg" alt="Floor-to-ceiling wooden shelves stacked with folded jeans beside a wall of cowboy boots" />
+        <span class="tagpin">Sorted by size</span>
+      </div>
+    </div>
+
+    <div class="cat-grid">
+      <div class="cat reveal">
+        <img src="images/western-wrangler-jeans.jpg" alt="A pair of dark-wash Wrangler cowboy-cut jeans" />
+        <div class="cat-label"><b>Jeans</b><span>Cowboy cut, boot cut, slim &amp; retro</span></div>
+      </div>
+      <div class="cat reveal">
+        <img src="images/western-ariat.jpg" alt="Ariat shirts, jackets and stacked jeans on a store display wall" />
+        <div class="cat-label"><b>Shirts &amp; Outerwear</b><span>Snap shirts, Ariat layers</span></div>
+      </div>
+      <div class="cat reveal">
+        <img src="images/western-rock47.jpg" alt="Rock 47 by Wrangler embellished jeans and a teal studded tank top" />
+        <div class="cat-label"><b>For Her</b><span>Rock 47 denim &amp; tops</span></div>
+      </div>
+      <div class="cat reveal">
+        <img src="images/western-costa.jpg" alt="A lit Costa sunglasses tower next to a rack of Ariat caps" />
+        <div class="cat-label"><b>Hats &amp; Shades</b><span>Caps, Costa &amp; Wiley X</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stitch" aria-hidden="true"></div>
+
+<!-- FORMAL -->
+<section id="formal" class="formal pad">
+  <div class="wrap">
+    <div class="formal-top">
+      <div class="reveal">
+        <span class="eyebrow eyebrow--light">Formal Wear</span>
+        <h2>Suited for the <em>occasion.</em></h2>
+        <div class="occ">
+          <span class="chip">Weddings</span>
+          <span class="chip">Quinceañeras</span>
+          <span class="chip">Prom</span>
+          <span class="chip">Groomsmen &amp; groups</span>
+          <span class="chip chip--turq">Big &amp; Tall</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="intro-copy">Tuxedos and suits to rent or to own — as an authorized Jim's Formal Wear dealer, we measure and outfit the whole party in matching looks right here in the shop. Western formal is our specialty: pair a grey suit jacket with a bolo tie, black hat and boots, and you're ranch-ready and wedding-ready at once.</p>
+        <div class="formal-note"><b>One stop for the whole party.</b> Rent the tuxes, match every groomsman, and grab the Western touches — hat, boots, bolo — in the same trip. Come in early and we'll get everyone squared away before the big day.</div>
+        <div style="margin-top:22px"><a class="btn btn--tan" href="rentals.html">Browse western rentals &rarr;</a></div>
+      </div>
+    </div>
+
+    <div class="formal-grid">
+      <figure class="tall reveal">
+        <img src="images/formal-wedding-black.jpg" alt="A wedding party in black tuxedos and champagne gowns cheering on a lawn" />
+        <figcaption class="cap">Black-tie wedding parties</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="images/formal-quince.jpg" alt="Three young men in tan suits with burgundy bow ties beside a quinceañera in a burgundy gown" />
+        <figcaption class="cap">Quinceañera courts</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="images/formal-wedding-blush.jpg" alt="A wedding party in grey suits and blush gowns walking under green trees" />
+        <figcaption class="cap">Color-matched to your day</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<div class="stitch stitch--onDark" aria-hidden="true"></div>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery pad">
+  <div class="wrap">
+    <span class="eyebrow eyebrow--light">Inside the store</span>
+    <h2 class="lead">Come see it in person.</h2>
+    <p class="intro-copy" style="color:rgba(242,236,221,.8);max-width:52ch">Aisles of Western shirts and hats, the Levi's and Wrangler walls, boots, belts and buckles — packed into one friendly shop on US-301.</p>
+    <div class="pano reveal"><img src="images/store-pano-1.jpg" alt="Wide view down the aisle of the store past racks of Western shirts and stacks of cowboy hats" loading="lazy" /></div>
+    <div class="pano reveal"><img src="images/store-pano-2.jpg" alt="Panorama of the shoe wall, boots, Levi's and Wrangler denim sections and belt display" loading="lazy" /></div>
+  </div>
+</section>
+<div class="stitch" aria-hidden="true"></div>
+
+<!-- VISIT -->
+<section id="visit" class="visit pad">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--turq">Visit us</span>
+      <h2>Stop by the shop.</h2>
+
+      <div class="info-row">
+        <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <div><b>Address</b><a href="https://maps.google.com/?q=HF+Men's+Wear+12632+US-301+Dade+City+FL+33525" target="_blank" rel="noopener">12632 US-301, Dade City, FL 33525<br/>Morningside Plaza · next to Walmart</a></div>
+      </div>
+
+      <div class="info-row">
+        <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>
+        <div><b>Phone</b><a href="tel:+13525679118">(352) 567-9118</a></div>
+      </div>
+
+      <div class="info-row">
+        <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+        <div><b>Email</b><a href="mailto:menswear5679118@aol.com">menswear5679118@aol.com</a></div>
+      </div>
+
+      <div class="info-row">
+        <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div style="width:100%">
+          <b>Hours</b>
+          <div class="hours-line"><span>Monday – Saturday</span><span>10:30 AM – 7:00 PM</span></div>
+          <div class="hours-line"><span>Sunday</span><span>11:30 AM – 5:00 PM</span></div>
+          <p class="confirm">Hours can shift around holidays and the wedding season — call ahead to be sure.</p>
+        </div>
+      </div>
+
+      <div class="visit-cta">
+        <a class="btn btn--solid" href="https://maps.google.com/?q=HF+Men's+Wear+12632+US-301+Dade+City+FL+33525" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn--ink-ghost" href="tel:+13525679118">Call the store</a>
+      </div>
+    </div>
+
+    <div class="map reveal">
+      <iframe
+        title="Map to HF Men's Wear, 12632 US-301, Dade City, FL"
+        loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-82.1968%2C28.3372%2C-82.1749%2C28.3463&layer=mapnik&marker=28.34174%2C-82.18585">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="43" height="43" rx="7" fill="#1d3050"/>
+          <rect x="5.5" y="5.5" width="37" height="37" rx="4.5" fill="none" stroke="#b27b44" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="24" y="31.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="20" fill="#f2ecdd">HF</text>
+        </svg>
+        <div><b>HF Men's Wear</b><br/><span>High Fashion Men's Wear · Est. 1977</span></div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#western">Western</a>
+        <a href="#formal">Formal</a>
+        <a href="#gallery">The Store</a>
+        <a href="#visit">Visit</a>
+        <a href="https://www.instagram.com/hfmens/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/hfmenswear/" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>12632 US-301, Dade City, FL 33525 · (352) 567-9118</span>
+      <span>© <span id="yr"></span> HF Men's Wear, Inc. · Family-owned since 1977</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+      els.forEach(function(e){e.classList.add('in')});return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+    },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>

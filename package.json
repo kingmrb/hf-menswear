@@ -1,0 +1,8 @@
+{
+  "name": "hf-menswear",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HF Men's Wear — Western & Formal wear website (Dade City, FL)",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

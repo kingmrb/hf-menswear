@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tuxedo &amp; Suit Rentals — Western &amp; Formal — HF Men's Wear · Dade City, FL</title>
+<meta name="description" content="Tuxedo and suit rentals at HF Men's Wear in Dade City, FL — an authorized Jim's Formal Wear dealer. Western and classic formal looks; browse the styles, note the number, and reserve in-store for weddings, quinceañeras and prom." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14110d;--indigo:#16233b;--indigo-2:#1d3050;--bone:#f2ecdd;--bone-2:#e7ddc8;
+    --tan:#b27b44;--tan-deep:#8f5f30;--turq:#1e8c82;--turq-deep:#146b63;--paper:#fbf8f0;
+    --line:rgba(20,17,13,.14);--display:"Fraunces",Georgia,serif;--sans:"Archivo",system-ui,sans-serif;--wrap:1200px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;line-height:1.04;letter-spacing:-.01em}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+
+  .stitch{height:9px;width:100%;
+    background-image:repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px),repeating-linear-gradient(90deg,var(--tan) 0 15px,transparent 15px 28px);
+    background-size:28px 2px,28px 2px;background-position:0 top,14px bottom;background-repeat:repeat-x,repeat-x;opacity:.85}
+
+  .eyebrow{font-weight:700;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tan-deep);display:inline-flex;align-items:center;gap:.7em;margin:0 0 18px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--tan);display:inline-block}
+  .eyebrow--light{color:#e9c79a}
+  .eyebrow--light::before{background:#e9c79a}
+
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:.92rem;text-decoration:none;padding:12px 22px;border-radius:2px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s;white-space:nowrap}
+  .btn--solid{background:var(--indigo);color:var(--bone)}
+  .btn--solid:hover{background:var(--ink);transform:translateY(-2px)}
+  .btn--tan{background:var(--tan);color:#fff}
+  .btn--tan:hover{background:var(--tan-deep);transform:translateY(-2px)}
+  .btn--ghost{border-color:var(--bone);color:var(--bone)}
+  .btn--ghost:hover{background:var(--bone);color:var(--ink)}
+  .btn--ink-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn--ink-ghost:hover{background:var(--ink);color:var(--bone)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(251,248,240,.9);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .mark{width:40px;height:40px;flex:none}
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .brand-txt b{font-family:var(--display);font-weight:600;font-size:1.18rem}
+  .brand-txt span{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tan-deep);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;opacity:.82;transition:opacity .2s}
+  .nav-links a:hover,.nav-links a.active{opacity:1}
+  .nav-links a.active{color:var(--tan-deep)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+
+  /* header banner */
+  .rhead{background:var(--indigo);color:var(--bone);position:relative;overflow:hidden}
+  .rhead::after{content:"";position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;border:2px dashed rgba(233,199,154,.25)}
+  .rhead-in{position:relative;z-index:2;padding:74px 0 66px;max-width:760px}
+  .rhead h1{color:var(--bone);font-size:clamp(2.4rem,5vw,3.9rem)}
+  .rhead h1 em{font-style:italic;color:#e9c79a}
+  .rhead p{color:rgba(242,236,221,.86);font-size:1.1rem;margin:20px 0 28px;max-width:60ch}
+  .rhead .btn-row{display:flex;gap:14px;flex-wrap:wrap}
+  .dealer{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:.82rem;letter-spacing:.02em;color:rgba(242,236,221,.7)}
+  .dealer b{color:#e9c79a}
+
+  /* how it works */
+  .how{background:var(--bone)}
+  .how-in{padding:60px 0}
+  .how h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:8px}
+  .how-sub{color:rgba(20,17,13,.72);max-width:60ch;margin-bottom:34px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:22px}
+  .step b.num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--indigo);color:#e9c79a;font-family:var(--display);font-weight:600;font-size:1.1rem;margin-bottom:12px}
+  .step h3{font-size:1.12rem;margin-bottom:5px}
+  .step p{font-size:.92rem;color:rgba(20,17,13,.72);margin:0}
+  .step .code-hi{color:var(--tan-deep);font-weight:700}
+
+  /* catalog */
+  .catalog{padding:66px 0 40px}
+  .cat-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:30px}
+  .cat-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+  .cat-head p{color:rgba(20,17,13,.7);max-width:42ch;font-size:.98rem}
+  .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .rcard{background:var(--paper);border:1px solid var(--line);border-radius:5px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .rcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,17,13,.14)}
+  .rph{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--indigo)}
+  .rph img{width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .5s ease}
+  .rcard:hover .rph img{transform:scale(1.045)}
+  .badge{position:absolute;top:12px;left:12px;background:var(--tan);color:#fff;font-weight:800;font-size:.82rem;letter-spacing:.06em;padding:7px 12px;border-radius:3px;box-shadow:0 6px 16px rgba(20,17,13,.28)}
+  .badge small{display:block;font-weight:700;font-size:.56rem;letter-spacing:.18em;opacity:.85;margin-bottom:1px}
+  .rtype{position:absolute;top:14px;right:12px;background:rgba(20,17,13,.72);color:var(--bone);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:3px}
+  .rbody{padding:16px 17px 18px;display:flex;flex-direction:column;flex:1}
+  .rbody h3{font-size:1.28rem;line-height:1.05}
+  .rbody p{font-size:.9rem;color:rgba(20,17,13,.72);margin:7px 0 0}
+  .rorder{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line);font-size:.84rem;color:var(--ink);display:flex;align-items:center;gap:7px}
+  .rorder b{color:var(--tan-deep)}
+  .rorder svg{width:15px;height:15px;color:var(--turq-deep);flex:none}
+
+  .note{margin:34px 0 0;padding:20px 22px;background:var(--indigo);color:var(--bone);border-radius:5px;font-size:.98rem}
+  .note b{color:#e9c79a}
+
+  /* cta band */
+  .cta{background:var(--ink);color:var(--bone);padding:64px 0;text-align:center}
+  .cta h2{font-size:clamp(1.9rem,3.6vw,2.9rem);color:var(--bone);max-width:20ch;margin:0 auto 10px}
+  .cta h2 em{font-style:italic;color:#e9c79a}
+  .cta p{color:rgba(242,236,221,.8);margin:0 auto 26px;max-width:52ch}
+  .cta .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--ink);color:rgba(242,236,221,.72);padding:52px 0 32px;border-top:1px solid rgba(242,236,221,.12)}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:12px}
+  .foot-brand b{font-family:var(--display);color:var(--bone);font-size:1.3rem}
+  .foot-brand span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tan)}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-links a{text-decoration:none;font-weight:600;color:var(--bone);opacity:.82}
+  .foot-links a:hover{opacity:1;color:#e9c79a}
+  .foot-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(242,236,221,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:1000px){.rgrid{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:760px){.nav-links{display:none}.rgrid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:480px){.rgrid{grid-template-columns:1fr 1fr;gap:14px}.rbody h3{font-size:1.12rem}.nav-cta .btn span.full{display:none}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.rcard,.rph img{transition:none}}
+  .catbar{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:70px;z-index:40}
+  .catbar .wrap{display:flex;gap:12px;align-items:center;padding:12px 26px;flex-wrap:wrap}
+  .catbar span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tan-deep);font-weight:700;margin-right:2px}
+  .catbar a{text-decoration:none;font-weight:700;font-size:.86rem;color:var(--indigo);border:1.5px solid var(--line);padding:7px 16px;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+  .catbar a:hover{background:var(--indigo);border-color:var(--indigo);color:var(--bone)}
+  .cat-head{scroll-margin-top:150px}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--turq);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="HF Men's Wear home">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="43" height="43" rx="7" fill="#16233b"/>
+        <rect x="5.5" y="5.5" width="37" height="37" rx="4.5" fill="none" stroke="#b27b44" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="24" y="31.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="20" fill="#f2ecdd">HF</text>
+      </svg>
+      <span class="brand-txt"><b>HF Men's Wear</b><span>Dade City · Est. 1977</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#western">Western</a>
+      <a href="index.html#formal">Formal</a>
+      <a href="rentals.html" class="active" aria-current="page">Rentals</a>
+      <a href="index.html#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--tan" href="tel:+13525679118">Call <span class="full">(352) 567-9118</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HEADER -->
+<section class="rhead">
+  <div class="wrap rhead-in">
+    <span class="eyebrow eyebrow--light">Rentals · Western &amp; Formal</span>
+    <h1>Rent the whole look, <em>hat to boots.</em></h1>
+    <p>We rent tuxedos and suits through Jim's Formal Wear — western looks with cowboy-cut coats and bolos, plus classic tuxedos and suits for any formal occasion. Browse the styles below, note the number, then call or stop in to reserve. We measure you in the shop and your rental is ready for pickup before the big day.</p>
+    <div class="btn-row">
+      <a class="btn btn--tan" href="#looks">Browse the looks</a>
+      <a class="btn btn--ghost" href="tel:+13525679118">Call to reserve</a>
+    </div>
+    <div class="dealer">✦ Authorized <b>Jim's Formal Wear</b> dealer — weddings, quinceañeras &amp; prom</div>
+  </div>
+</section>
+<div class="stitch" aria-hidden="true"></div>
+
+<div class="catbar"><div class="wrap">
+  <span>Jump to</span>
+  <a href="#western">Western</a>
+  <a href="#formal">Formal Wear</a>
+</div></div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="wrap how-in">
+    <h2>How renting works</h2>
+    <p class="how-sub">No account, no online checkout — it's simple and done in person, the way we've always done it.</p>
+    <div class="steps">
+      <div class="step reveal"><b class="num">1</b><h3>Find your look</h3><p>Scroll the styles below and jot down the <span class="code-hi">style number</span> you like.</p></div>
+      <div class="step reveal"><b class="num">2</b><h3>Call or come in</h3><p>Reserve it with us — just mention the number. Bring your groomsmen or court along.</p></div>
+      <div class="step reveal"><b class="num">3</b><h3>Get measured</h3><p>We size you and the whole party right here in the store so everything matches.</p></div>
+      <div class="step reveal"><b class="num">4</b><h3>Pick it up</h3><p>Jim's Formal Wear delivers your rental to the shop, pressed and ready before your event.</p></div>
+    </div>
+  </div>
+</section>
+<div class="stitch" aria-hidden="true"></div>
+
+<!-- CATALOG -->
+<section id="looks" class="catalog">
+  <div class="wrap">
+    <div class="cat-head" id="western">
+      <div>
+        <span class="eyebrow">Category · Western</span>
+        <h2>Western tuxedos &amp; suits.</h2>
+      </div>
+      <p>Cowboy-cut looks for weddings, quinceañeras and prom. Tell us the number (or the name) and we'll take it from there.</p>
+    </div>
+
+    <div class="rgrid">
+
+      <!-- 202 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-202.jpg" alt="Tan sport coat worn over denim with an open collar and brown boots" loading="lazy" />
+          <span class="badge"><small>Style</small>202</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Creekside Tan</h3><p>A soft tan sport coat over denim with an open collar — easy and laid-back.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 202</b></div></div>
+      </article>
+
+      <!-- 302 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-302.jpg" alt="Royal blue suit with a cream cowboy hat and open collar" loading="lazy" />
+          <span class="badge"><small>Style</small>302</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Bluebonnet Blue</h3><p>A bold royal-blue suit with a cream hat. A standout for grooms and prom alike.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 302</b></div></div>
+      </article>
+
+      <!-- 392 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-392.jpg" alt="Grey coat over black shirt and trousers with a black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>392</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Timber Grey</h3><p>A grey coat over a black shirt and trousers with a black hat — moody and modern.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 392</b></div></div>
+      </article>
+
+      <!-- 588 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-588.jpg" alt="Classic black tuxedo with a black western hat" loading="lazy" />
+          <span class="badge"><small>Style</small>588</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Onyx Black Tux</h3><p>A classic black tuxedo topped with a black western hat. Black-tie, cowboy style.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 588</b></div></div>
+      </article>
+
+      <!-- 931 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-931.jpg" alt="Black tuxedo with a bow tie and black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>931</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Black-Tie Classic</h3><p>A timeless black tuxedo with a bow tie and black hat. You can't go wrong.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 931</b></div></div>
+      </article>
+
+      <!-- 272 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-272.jpg" alt="Ivory-tan jacket and vest worn over denim with a powder-blue tie and cream hat" loading="lazy" />
+          <span class="badge"><small>Style</small>272</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Sunlit Tan</h3><p>Ivory-tan jacket and vest over denim with a powder-blue tie — a warm daytime favorite.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 272</b></div></div>
+      </article>
+
+      <!-- F272 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-f272.jpg" alt="Tan vest and white shirt worn over denim with a cream cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>F272</span><span class="rtype">Vest look</span></div>
+        <div class="rbody"><h3>Tan Vest &amp; Denim</h3><p>The 272 tan look worn vest-only over denim — a lighter option for hot Florida days.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style F272</b></div></div>
+      </article>
+
+      <!-- 311 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-311.jpg" alt="Deep navy tuxedo with a black cowboy hat by a fence" loading="lazy" />
+          <span class="badge"><small>Style</small>311</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Ranch Navy Tux</h3><p>A deep navy tuxedo with a black hat. Rich color, dressy, still western.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 311</b></div></div>
+      </article>
+
+      <!-- 421 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-421.jpg" alt="Head-to-toe black suit, shirt and tie with a black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>421</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Midnight Cowboy</h3><p>Head-to-toe black — suit, shirt and tie with a black hat. A sharp, all-black statement.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 421</b></div></div>
+      </article>
+
+      <!-- GREY -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-grey.jpg" alt="Medium grey suit and vest with a bolo tie and black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Signature</small>Grey</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Medium Grey Cowboy</h3><p>Our signature look — a medium-grey suit and vest with a bolo tie and black hat.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for the <b>Grey Cowboy</b></div></div>
+      </article>
+
+      <!-- IVORY -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-ivory.jpg" alt="Groom in a cream ivory three-piece western suit with a brown tie and cowboy hat" loading="lazy" />
+          <span class="badge"><small>By name</small>Ivory</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Ivory Ranch</h3><p>A soft cream-ivory three-piece wedding suit with a brown tie and cowboy hat. Warm and elegant for the ceremony — wear it with trousers or denim.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for the <b>Ivory Ranch</b></div></div>
+      </article>
+
+      <!-- SAGE -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-sage.jpg" alt="Sage-green three-piece suit with an earth-tone tie and black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>Sage</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Sagebrush Green</h3><p>A sage-green three-piece with an earth-tone tie and black hat — made for outdoor weddings.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Sage</b></div></div>
+      </article>
+
+      <!-- F921 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-f921.jpg" alt="Slim charcoal vest and trousers with a bow tie and black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>F921</span><span class="rtype">Vest look</span></div>
+        <div class="rbody"><h3>Charcoal Vest</h3><p>A slim charcoal vest and trousers with a bow tie and black hat. Dressy without the jacket.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style F921</b></div></div>
+      </article>
+
+      <!-- F921 DENIM -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-f921denim.jpg" alt="Charcoal vest paired with a chambray denim shirt and black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>F921</span><span class="rtype">Vest look</span></div>
+        <div class="rbody"><h3>Charcoal &amp; Denim</h3><p>The F921 vest paired with a chambray denim shirt — dressed-down and all western.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>F921 · denim shirt</b></div></div>
+      </article>
+
+      <!-- 222 -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-222.jpg" alt="Hunter green cowboy coat worn over denim with a black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>222</span><span class="rtype">Cowboy coat</span></div>
+        <div class="rbody"><h3>Hunter Green Coat</h3><p>A hunter-green cowboy coat (Ike Behar "Luka"), worn over your own denim. Coat rental.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 222</b></div></div>
+      </article>
+
+      <!-- NBRC -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-nbrc.jpg" alt="Brick-red slim-fit cowboy coat with a cream cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>NBRC</span><span class="rtype">Cowboy coat</span></div>
+        <div class="rbody"><h3>Brick Cowboy Coat</h3><p>A brick-red slim-fit cowboy coat — pair it with denim and a hat. Coat rental.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style NBRC</b></div></div>
+      </article>
+
+      <!-- NWHC -->
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/rental-nwhc.jpg" alt="Wheat-tan slim-fit cowboy coat over a white shirt with a black cowboy hat" loading="lazy" />
+          <span class="badge"><small>Style</small>NWHC</span><span class="rtype">Cowboy coat</span></div>
+        <div class="rbody"><h3>Wheat Cowboy Coat</h3><p>A wheat-tan slim-fit cowboy coat to wear over your own jeans. Coat rental.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style NWHC</b></div></div>
+      </article>
+
+    </div>
+
+    <div class="note reveal"><b>Don't see the number you were given?</b> Jim's Formal Wear carries hundreds of styles beyond these — bring in any style number, a photo, or a color you're after and we'll match it for your wedding, quinceañera, prom or group.</div>
+
+    <div class="cat-head" id="formal" style="margin-top:70px">
+      <div>
+        <span class="eyebrow">Category · Formal Wear</span>
+        <h2>Classic suits &amp; tuxedos.</h2>
+      </div>
+      <p>Regular formal wear — suits and tuxedos for weddings, prom, business and every dressed-up occasion.</p>
+    </div>
+
+    <div class="rgrid">
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-latte.jpg" alt="Latte Suit — suit" loading="lazy" />
+          <span class="badge"><small>By name</small>Latte</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Latte Suit</h3><p>A warm latte-tan three-piece with a burgundy tie — soft, earthy and wedding-ready.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for the <b>Latte Suit</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-262.jpg" alt="Heather Grey — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>262</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Heather Grey</h3><p>A light heather-grey three-piece suit. Soft and modern — great for daytime weddings.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 262</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-350.jpg" alt="Medium Grey — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>350</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Medium Grey</h3><p>A medium-grey performance-stretch three-piece. Comfortable and camera-ready.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 350</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-391.jpg" alt="Steel Grey — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>391</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Steel Grey</h3><p>A steel-grey slim tuxedo with satin peak lapels. Understated and sharp.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 391</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-802.jpg" alt="Black Troy — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>802</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Black Troy</h3><p>A clean black notch-lapel suit — the everyday formal workhorse.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 802</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-nsbc.jpg" alt="Black Slim Suit — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>NSBC</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Black Slim Suit</h3><p>A black slim-fit suit — versatile for formal events, business and services.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style NSBC</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-852.jpg" alt="Emerson — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>852</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Emerson</h3><p>A dark, slim tailored suit — dressy for weddings, interviews and events.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 852</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-221.jpg" alt="Indigo Blue — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>221</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Indigo Blue</h3><p>An indigo-blue Ike Behar suit with a notch lapel — versatile for weddings and business.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 221</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-nobc.jpg" alt="Oxford Blue — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>NOBC</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Oxford Blue</h3><p>A light oxford-blue slim-fit suit — fresh and springy for outdoor weddings.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style NOBC</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-602.jpg" alt="Ivory Troy — suit" loading="lazy" />
+          <span class="badge"><small>Style</small>602</span><span class="rtype">Suit</span></div>
+        <div class="rbody"><h3>Ivory Troy</h3><p>A soft ivory suit — light and elegant for warm-weather weddings.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 602</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-372.jpg" alt="Classic Navy — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>372</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Classic Navy</h3><p>A classic-fit navy tuxedo with a bow tie. Timeless and flattering.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 372</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-371.jpg" alt="Navy Ultra-Slim — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>371</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Navy Ultra-Slim</h3><p>A navy ultra-slim tuxedo with satin lapels and a bow tie. Trim and contemporary.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 371</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-981.jpg" alt="Force Black Tux — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>981</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Force Black Tux</h3><p>The MK Force black tuxedo with a modern slim cut and satin lapel.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 981</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-921.jpg" alt="Black Legacy Tux — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>921</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Black Legacy Tux</h3><p>The MK Legacy black tuxedo — refined performance-stretch black-tie.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 921</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-ntbc.jpg" alt="Black Slim Tux — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>NTBC</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Black Slim Tux</h3><p>A black stretch slim-fit tuxedo — sleek, modern black-tie.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style NTBC</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-601.jpg" alt="Ivory Shawl Tux — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>601</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Ivory Shawl Tux</h3><p>An ivory shawl-lapel dinner jacket over black trousers — classic summer black-tie.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 601</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-201.jpg" alt="Burgundy Empire Tux — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>201</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Burgundy Empire Tux</h3><p>A rich burgundy shawl-lapel tuxedo. Warm color, classic black-tie shape.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 201</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-122.jpg" alt="Apple Red Paisley — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>122</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Apple Red Paisley</h3><p>A deep apple-red paisley dinner jacket over black trousers. A bold formal statement.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 122</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-132.jpg" alt="Cobalt Paisley — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>132</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Cobalt Paisley</h3><p>A cobalt-blue paisley dinner jacket with black trousers and bow tie.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 132</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-172.jpg" alt="White &amp; Silver Paisley — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>172</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>White &amp; Silver Paisley</h3><p>An ivory-and-silver paisley dinner jacket with black trousers. Sharp and celebratory.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 172</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-182.jpg" alt="Black Paisley — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>182</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Black Paisley</h3><p>A tonal black paisley tuxedo — subtle texture, all-black formal.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 182</b></div></div>
+      </article>
+
+      <article class="rcard reveal">
+        <div class="rph"><img src="images/formal-192.jpg" alt="Granite Paisley — tuxedo" loading="lazy" />
+          <span class="badge"><small>Style</small>192</span><span class="rtype">Tuxedo</span></div>
+        <div class="rbody"><h3>Granite Paisley</h3><p>A granite-grey paisley dinner jacket with black trousers and bow tie.</p>
+          <div class="rorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4.2-1.6-2 2a12 12 0 01-5.7-5.7l2-2L7.5 4H4z"/></svg>Ask for <b>Style 192</b></div></div>
+      </article>
+
+    </div>
+
+    <div class="note reveal"><b>Need a color to match the wedding?</b> Bring in a swatch or a photo — Jim's Formal Wear offers these styles in a wide range of colors, plus matching vests, ties and shoes for the whole party.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready to reserve your <em>look?</em></h2>
+    <p>Call the shop or stop by with your style number and event date. We'll size the whole party and have everything ready before the big day.</p>
+    <div class="btn-row">
+      <a class="btn btn--tan" href="tel:+13525679118">Call (352) 567-9118</a>
+      <a class="btn btn--ghost" href="https://maps.google.com/?q=HF+Men's+Wear+12632+US-301+Dade+City+FL+33525" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="43" height="43" rx="7" fill="#1d3050"/>
+          <rect x="5.5" y="5.5" width="37" height="37" rx="4.5" fill="none" stroke="#b27b44" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="24" y="31.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="20" fill="#f2ecdd">HF</text>
+        </svg>
+        <div><b>HF Men's Wear</b><br/><span>High Fashion Men's Wear · Est. 1977</span></div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="index.html#western">Western</a>
+        <a href="index.html#formal">Formal</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="index.html#visit">Visit</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>12632 US-301, Dade City, FL 33525 · (352) 567-9118 · Authorized Jim's Formal Wear dealer</span>
+      <span>© <span id="yr"></span> HF Men's Wear, Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
